@@ -14,6 +14,16 @@ public:
 		in2 = h;
 	}
 
+	int getin1(void)
+	{
+		return in1;
+	}
+
+	int getin2(void)
+	{
+		return in2;
+	}
+
 	int thecarryout(void)
 	{
 		return in1 & in2;
@@ -38,9 +48,14 @@ public:
 		in2 = thecarryout();
 	}
 
-	int setcarryin(int a)
+	void setcarryin(int a)
 	{
 		carryin = a;
+	}
+
+	int getcarryin(void)
+	{
+		return carryin;
 	}
 
 	int thecarryout1(void)
@@ -71,19 +86,19 @@ int main(void)
 
 	while(index2 < 0 || index2 > 1)
 	{
-		cout << "Enter 0 or 1: ";
+		cout << "Enter 0 or 1 for in1: ";
 		cin >> index2;
 	}
 
 	while(index3 < 0 || index3 > 1)
 	{
-		cout << "Enter 0 or 1: ";
+		cout << "Enter 0 or 1 for in2: ";
 		cin >> index3;
 	}
 
 	while(index4 < 0 || index4 > 1)
 	{
-		cout << "Enter 0 or 1: ";
+		cout << "Enter 0 or 1 for carryin: ";
 		cin >> index4;
 	}
 
@@ -93,6 +108,10 @@ int main(void)
 	cout << "The sum is " << halfaddertemp.thesum1() << endl;
 	cout << "The carryout is " << halfaddertemp.thecarryout1() << endl;
 
+	cout << "The in1 is " << halfaddertemp.getin1() << endl;
+	cout << "The in2 is " << halfaddertemp.getin2() << endl;
+	cout << "The carryin is " << halfaddertemp.getcarryin() << endl;
+	
 	cout << endl;
 
 	return 0;

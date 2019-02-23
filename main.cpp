@@ -24,6 +24,10 @@ public:
 		return in2;
 	}
 
+protected:
+	int in1;
+	int in2;
+	friend class fulladder;
 	int thecarryout(void)
 	{
 		return in1 & in2;
@@ -33,10 +37,6 @@ public:
 	{
 		return in1 ^ in2;
 	}
-
-protected:
-	int in1;
-	int in2;
 };
 
 class fulladder : public halfadder

@@ -107,9 +107,12 @@ int main(void)
 	halfaddertemp.setin1(index2);
 	halfaddertemp.setin2(index3);
 	halfaddertemp.setcarryin(index4);
+	
 	cout << "The sum is " << halfaddertemp.thesum1() << endl;
 	cout << "The carryout is " << halfaddertemp.thecarryout1() << endl;
-
+	
+	cout << endl;
+	
 	cout << "The in1 is " << halfaddertemp.getin1() << endl;
 	cout << "The in2 is " << halfaddertemp.getin2() << endl;
 	cout << "The carryin is " << halfaddertemp.getcarryin() << endl;

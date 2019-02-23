@@ -25,8 +25,6 @@ public:
 	}
 
 protected:
-	int in1;
-	int in2;
 	friend class fulladder;
 	int thecarryout(void)
 	{
@@ -37,6 +35,10 @@ protected:
 	{
 		return in1 ^ in2;
 	}
+
+private:
+	int in1;
+	int in2;
 };
 
 class fulladder : public halfadder
@@ -68,7 +70,7 @@ public:
 		return thesum() ^ carryin;
 	}
 
-protected:
+private:
 	int carryin;
 };
 

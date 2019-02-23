@@ -4,11 +4,6 @@ using namespace std;
 class halfadder
 {
 public:
-	int in1;
-	int in2;
-	int out;
-	int carryout1;
-
 	void setin1(int w)
 	{
 		in1 = w;
@@ -28,15 +23,15 @@ public:
 	{
 		return in1 ^ in2;
 	}
+
+protected:
+	int in1;
+	int in2;
 };
 
 class fulladder : public halfadder
 {
 public:
-	int carryin;
-	int sum;
-	int carryout;
-
 	fulladder()
 	{
 		in1 = thesum();
@@ -57,6 +52,9 @@ public:
 	{
 		return thesum() ^ carryin;
 	}
+
+protected:
+	int carryin;
 };
 
 int main(void)

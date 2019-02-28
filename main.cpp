@@ -62,7 +62,7 @@ public:
 
 	int thecarryout1(void)
 	{
-		return (in1 & in2) | thesum(); 
+		return (in2 & carryin) | (in1 & carryin) | (in1 & in2); 
 	}
 
 	int thesum1(void)
